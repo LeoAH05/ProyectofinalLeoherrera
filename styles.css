@@ -10,7 +10,20 @@
     border-radius: 50px;
 }
 
+.btn{
+  background-color: rgb(124, 4, 4); 
+  color: white;
+  border: none;
+}
 
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: rgb(124, 4, 4);
+  color: white;
+  border: none;
+  box-shadow: none;
+}
 
 #navbarNav{
     
@@ -38,6 +51,23 @@
 
     /* inicio index */
 
+    .bienvenida{
+        text-align: center;
+        background-color: rgb(124, 4, 4);
+color: white;
+margin-top: 20px;
+margin-bottom: 30px;
+    }
+
+    .frase{
+        text-align: center;
+        margin-bottom: 30px;
+/* background-color: rgb(124, 4, 4);
+color: white;
+margin-top: 20px;
+margin-bottom: 30px; */
+    }
+
     .presentacion{
         width: 100%;
         height: 600px;
@@ -45,11 +75,19 @@
         grid-template-columns: 50% 50% ;
     }
 
-    /* .nosotros{
-        background-color: black;
-        grid-row: 1/2;
-        grid-column: 1/2;
-    } */
+    .nosotros h3{
+        margin-bottom: 30px;
+    }
+
+    .nosotros{
+        padding-top: 200px;
+        padding-left: 20px;
+        padding-right: 10px;
+        border: 5px solid rgb(124, 4, 4);
+    
+    
+
+    }
  
     .libreria{
         background-size: cover;
@@ -62,17 +100,44 @@
     }
 
     /* carrusel */
-
+.text-center{
+    background-color: rgb(124, 4, 4);
+    text-align: center;
+    color: white;
+    padding: 5px;
+    margin-bottom: 20px;
+}
    
+@media only screen and (max-width: 768px) {
+  .presentacion {
+    grid-template-columns: 100%;
+    height: auto;
+  }
+
+  .nosotros {
+    padding-top: 50px;
+  }
+
+  .libreria {
+    height: 300px;
+  }
+}
     /* fin inicio */
 
     /* pagina novelas */
+
+    .elige{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }
 
     .generos{
     display: grid;
     width: 100%;
     height: 600px;
     grid-gap: 20px 10px
+    
 }
 
 .libro{
@@ -80,7 +145,10 @@
     border-radius: 20px;
     background-size: cover;
     background-position: center;
-    text-align: left;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    line-height: 100px;
     font-weight: bold;
     transition: 0,5s;
 }
@@ -134,6 +202,32 @@
     grid-row: 2/4;
 }
 
+@media only screen and (max-width: 768px) {
+  .generos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .libro {
+    min-height: 150px;
+  }
+
+ 
+  .libro1,
+  .libro2,
+  .libro3,
+  .libro4,
+  .libro5,
+  .libro6,
+  .libro7,
+  .libro8 {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+ 
+
 /* .ventas {
   padding: 40px;
   
@@ -141,6 +235,7 @@
 
 .ventas h2 {
   font-size: 28px;
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   background-color: rgb(124, 4, 4);
@@ -164,18 +259,26 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease;
-  width: calc(33.333% - 20px); /* 3 por fila con espacio */
+  width: calc(33.333% - 20px); 
   min-width: 250px;
   display: flex;
   flex-direction: column;
 }
 
+.novel{
+    margin-top: 15px;
+}
 
 
 
 /* fin pagina novelas */
 
 /* inicio educacional */
+
+.educacional{
+    margin-top: 50px;
+    margin-left: 10px;
+}
 
 .educativo{
     display: grid;
@@ -214,8 +317,96 @@
     background-position: center;
     background-size: cover;
 }
-    /* pagina comic */
 
+.material{
+    background-color: rgb(124, 4, 4);
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+.logotipos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px;
+    
+}
+
+.logotipo{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 5px solid rgb(124, 4, 4);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.logotipo1{
+    background-image: url(./imagenes/santillana);
+}
+
+.logotipo2{
+    background-image: url(./imagenes/penguin.jpg);
+}
+
+.logotipo3{
+    background-image: url(./imagenes/pearson.png);
+}
+
+.logotipo4{
+    background-image: url(./imagenes/oxford.png);
+}
+
+.logotipo5{
+    background-image: url(./imagenes/larousse.png);
+}
+
+.logotipo6{
+    background-image: url(./imagenes/Kel.png);
+
+}
+
+.logotipo7{
+    background-image: url(./imagenes/kapelusz.jpg);
+
+}
+
+.logotipo8{
+    background-image: url(./imagenes/cambridge.png);
+}
+
+@media only screen and (max-width: 768px){
+  .educativo{
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .estudio,
+  .estudiando{
+    width: 100%;
+    padding: 30px;
+  }
+
+  .estudiando{
+    height: 300px;
+  }
+}
+/* fin educacional */
+
+/* pagina comic */
+
+
+
+.editores{
+    background-color: rgb(124, 4, 4);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
 
 .comics{
     width: 100%;
@@ -224,8 +415,10 @@
 }
 
 .comic{
+    
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .comic1{
@@ -246,9 +439,25 @@
     grid-column: 2/3;
 }
 
+@media (max-width: 768px){
+  .comics{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .comic1,
+  .comic2,
+  .comic3{
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 300px;
+  }
+}
+
 .mangas{
 display: flex;
-
+margin-bottom: 30px;
 }
 
 
@@ -263,10 +472,11 @@ display: flex;
 }
 
 .editorial{
-    width: 200px;
-    height: 100px;
-    background-size: cover;
+    /* width: 400px;
+    height: 200px; */
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     
 }
 
@@ -288,21 +498,39 @@ display: flex;
 }
 
 .promos{
-    background-color:aqua;
+    background-image: url(./imagenes/metropolis.jpg);
     width: 600px;
     height: 400px;
-}
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+} 
+
+ .promociones p{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    padding-top: 45px;
+    margin-top: 15px;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-color: white;
+    
+} 
 
 .promos img{
-    
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 220px;
+    margin-left: 60px;
     animation-name: superman;
     animation-iteration-count: 2;
     animation-duration: 6s;
-    animation-delay: 1
+    animation-delay: 1 
+
 }
 
+    
 @keyframes superman{
     from{
         width: 0;
@@ -310,11 +538,11 @@ display: flex;
     }
 
     to{
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 220px;
     }
-}
-
+} 
+ 
 
 
 /* fin pagina comic */
@@ -325,6 +553,7 @@ display: flex;
     display: flex;
     gap: 30px;
     padding: 30px;
+    flex-wrap: wrap;
 }
 
 .card-body a{
@@ -371,7 +600,56 @@ textarea{
 /* inicio footer */
 
 footer{
+    display: flex;
     background-color: rgb(124, 4, 4);
     color: white;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
 }
 
+/* footer div{
+  flex: 1 1 200px;
+  max-width: 300px;
+} */
+
+footer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
+.redes{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 24px;
+  transition: 0.4s;
+}
+
+.redes:hover{
+    transform: scale(1.1);
+    border-radius: 30px;
+}
+
+
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+}
+
+.whatsapp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
